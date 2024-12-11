@@ -1,0 +1,15 @@
+cookie:
+  expiry_days: 30
+  key: abcd
+  name: dostai
+credentials:
+  usernames:
+    anubhavyadav:
+      email: anubhavyadav77ff@gmail.com
+      name: Anubhav Yadav
+      password: $2b$12$6Rm6pKvgCYhr2YRbrV.6L.ii6Ws71PbpYjfluCgGPRvUj9P2mTeGG
+    keshavpriyam:
+      email: keshav@gmail.com
+      name: Keshav Priyam
+      password: $2b$12$FSANlpl3.8yhePN.ulq7V.NRe9ajUPQOva4FV8eTDvd4lKJ/dJE52
+      preferred_lang: English

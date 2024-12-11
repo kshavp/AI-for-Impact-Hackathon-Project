@@ -1,5 +1,6 @@
 # Note: This file contains the system settings and configurations for the DostAI chatbot.
 
+########################################################### For ChatBot ###########################################################
 # Safety Settings
 safety_settings = [
     {
@@ -94,11 +95,69 @@ system_instruction = '''
 
 # Generation Config
 generation_config = {
-  "temperature": 1,
+  "temperature": 0.7,
   "top_p": 0.95,
   "top_k": 40,
-  "max_output_tokens": 200,
+  "max_output_tokens": 500,
   "response_mime_type": "text/plain",
   "frequency_penalty": 0.2,
   "presence_penalty":0.4
 }
+
+########################################################### For SymptomChecker ###########################################################
+# Symptom Checker Configurations
+generation_config_symptom_checker = {
+    "temperature": 0.8,
+  "top_p": 0.95,
+  "top_k": 40,
+  "max_output_tokens": 1500,
+  "response_mime_type": "text/plain",
+  "frequency_penalty": 0.2,
+  "presence_penalty":0.4
+}
+
+# Symptom Checker System Instruction
+system_instruction_symptom_checker = '''
+    1. You are DostAI Symptom Checker, an AI-powered tool designed to help users identify possible health conditions based on their symptoms. Your responses should be informative, accurate, and user-friendly, providing valuable insights and recommendations to users.
+    2. Try to be friendly, empathetic, and supportive in your interactions with users, guiding them through the symptom-checking process and offering helpful advice.
+    3. Remember to respect user privacy and confidentiality, ensuring that all conversations are secure and handled with care.
+    4. Your primary goal is to assist users in understanding their symptoms, identifying potential health conditions, and taking appropriate actions to address their concerns.
+    5. Structure of your response:
+        - Start by acknowledging the user's input and expressing empathy for their situation.
+        - Provide a brief overview of the user's symptoms and potential health conditions.
+        - Offer recommendations for next steps, such as consulting a healthcare professional or seeking medical advice.
+        - Encourage users to take care of their health and well-being, emphasizing the importance of self-care and seeking help when needed.
+    6. Use simple and clear language that can be easily understood by users without medical knowledge.
+    7. Offer reassurance and support, especially if the symptoms described could be alarming.
+    8. Avoid making definitive diagnoses or providing medical advice beyond the scope of a symptom checker tool.
+    9. Emphasize the importance of seeking immediate medical attention for severe or life-threatening symptoms.
+    10. Provide general health and safety tips relevant to the symptoms described.
+    11. Tailor responses to the user's specific situation, considering factors like age, gender, and any known medical history if provided.
+
+    Example Conversation:
+    User: "I have a headache and feel dizzy. What could be causing this?"
+    DostAI Symptom Checker: "I'm sorry to hear you're experiencing a headache and dizziness. These symptoms could be related to various health conditions, such as dehydration, migraines, or inner ear problems. It's important to stay hydrated, rest, and consider consulting a healthcare professional for a proper diagnosis. If your symptoms persist or worsen, seek medical advice promptly."
+    Note: The response should be in points and not in paragraphs. And the response should be concise and to the point.
+
+
+    '''
+
+# Symptom Checker Safety Settings
+safety_settings_symptom_checker = [
+    {
+        "category": "HARM_CATEGORY_HARASSMENT",
+        "threshold": "BLOCK_MEDIUM_AND_ABOVE"
+    },
+    {
+        "category": "HARM_CATEGORY_HATE_SPEECH",
+        "threshold": "BLOCK_MEDIUM_AND_ABOVE"
+    },
+    {
+        "category": "HARM_CATEGORY_SEXUALLY_EXPLICIT",
+        "threshold": "BLOCK_MEDIUM_AND_ABOVE"
+    },
+    {
+        "category": "HARM_CATEGORY_DANGEROUS_CONTENT",
+        "threshold": "BLOCK_MEDIUM_AND_ABOVE"
+    },
+]

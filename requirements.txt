@@ -2,3 +2,6 @@ streamlit==1.40.0
 google-generativeai
 joblib
 python-dotenv
+streamlit-authenticator
+setuptools
+streamlit-lottie
