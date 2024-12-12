@@ -4,12 +4,16 @@ cookie:
   name: dostai
 credentials:
   usernames:
-    anubhavyadav:
-      email: anubhavyadav77ff@gmail.com
-      name: Anubhav Yadav
-      password: $2b$12$6Rm6pKvgCYhr2YRbrV.6L.ii6Ws71PbpYjfluCgGPRvUj9P2mTeGG
-    keshavpriyam:
-      email: keshav@gmail.com
-      name: Keshav Priyam
-      password: $2b$12$FSANlpl3.8yhePN.ulq7V.NRe9ajUPQOva4FV8eTDvd4lKJ/dJE52
+    priyanshu123:
+      age: 24
+      designation: Doctor
+      email: priyanshu@gmail.com
+      gender: Male
+      name: Priyanshu Joshi
+      password: $2b$12$1rYWtQqsf8G7qtwAOArFvuepWgfHywtR45JlIgQr/g.P2YAAuBFX.
       preferred_lang: English
+      prob_facing: Mental Health
+      prob_reason: Professional
+      status: Single
+      working_hours: 12
+      working_place: Hospital

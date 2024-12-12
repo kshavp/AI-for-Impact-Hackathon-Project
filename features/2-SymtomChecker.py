@@ -3,22 +3,25 @@ import streamlit as st
 import time
 import os
 from dotenv import load_dotenv
-from features.system_settings import safety_settings_symptom_checker, system_instruction_symptom_checker, generation_config_symptom_checker
+from features.system_settings import safety_settings, system_instruction_symptom_checker, generation_config_symptom_checker
 
 load_dotenv()
 GOOGLE_API_KEY=os.environ.get('GOOGLE_API_KEY')
 genai.configure(api_key=GOOGLE_API_KEY)
 
 model = genai.GenerativeModel('gemini-1.5-pro',
-                safety_settings=safety_settings_symptom_checker,
+                safety_settings=safety_settings,
                 system_instruction=system_instruction_symptom_checker,
                 generation_config=generation_config_symptom_checker)
 
-st.info('Note: Dost AI Symptom Checker is a AI based features which is still under development. Please use it with caution and consult a doctor for professional advice.')
+st.info('Note: Dost AI Symptom Checker is a AI based features which is just a Prototype right now. Please use it with caution and consult a doctor for professional advice.')
 
-st.header('Symptom Checker', anchor='symptom-checker', divider='rainbow')
-st.write('This is a symptom checker tool that uses AI to help you identify possible health conditions based on your symptoms. And give the best possible advice on what to do next.')
+st.header('🩺Symptom Checker', anchor='symptom-checker', divider='rainbow')
+with st.expander('What is Symptom Checker?'):
+    st.write('Symptom Checker is a tool that uses Google Artificial Intelligence Model to help you identify possible health conditions based on your symptoms. It is not a substitute for professional medical advice, diagnosis, or treatment. Always consult a doctor for professional advice.')
+st.divider()
 
+st.subheader('Enter your details to check your symptoms:')
 with st.form(key='symptom-checker-form'):
     gender = st.selectbox('Select your gender*', ['Male', 'Female', 'Other'])
     age = st.number_input('Enter your age*', min_value=1, max_value=100)

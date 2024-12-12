@@ -28,7 +28,7 @@ for msg in st.session_state.chat_session.history:
         st.markdown(msg["content"])
 
 # Input field for user's message
-user_input = st.chat_input("Ask Gemini-Pro...")
+user_input = st.chat_input("Ask DostAI...")
 if user_input:
     # Add user's message to chat and display it
     st.chat_message("user").markdown(user_input)
