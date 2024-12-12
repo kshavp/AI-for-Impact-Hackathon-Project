@@ -44,7 +44,7 @@ if submit_button:
         st.success("Your daily report has been submitted successfully.")
 
 with st.spinner("Generating summary and advice..."):
-    if wake_up_time and day_description and day_rating and activities and problems and feelings:    
+    if wake_up_time and day_description and day_rating and activities and problems and feelings is not None:    
         user_name = user_data.get('name', 'User')
         prompt = f"""
         User: {user_name}

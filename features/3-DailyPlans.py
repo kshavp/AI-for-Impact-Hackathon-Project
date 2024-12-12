@@ -14,7 +14,7 @@ model = genai.GenerativeModel(model_name="gemini-1.5-flash",
                 system_instruction=system_instruction_daily_plans,
                 generation_config=generation_config_daily_plans)
 
-st.info("Note: Dost AI Daily Plans is a AI based features which is just a Prototype right now. Please use it with caution and consult a doctor for professional advice.")
+st.info("Note: Dost AI Daily Plans is a AI based features which is just a Prototype right now. Please use it with caution and change the generated plans as per your needs.")
 
 st.header("📅Daily Plans Maker", anchor="daily-plans", divider="rainbow")
 with st.expander("What is Daily Plans Maker?"):
