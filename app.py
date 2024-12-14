@@ -1,3 +1,5 @@
+#PRODUCTION BUILD
+
 import streamlit as st
 import os
 import streamlit_lottie as st_lottie
